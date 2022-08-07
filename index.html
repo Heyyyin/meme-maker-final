@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Meme maker</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<canvas></canvas>
+		<div class="container">
+			<div class="color-column">
+				<input type="color" id="color" />
+				<button
+					class="color-option"
+					style="background-color: #1abc9c"
+					data-color="#1abc9c"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #3498db"
+					data-color="#3498db"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #34495e"
+					data-color="#34495e"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #27ae60"
+					data-color="#27ae60"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #8e44ad"
+					data-color="#8e44ad"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #f1c40f"
+					data-color="#f1c40f"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #e74c3c"
+					data-color="#e74c3c"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #bdc3c7"
+					data-color="#bdc3c7"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #2ecc71"
+					data-color="#2ecc71"
+				></button>
+				<button
+					class="color-option"
+					style="background-color: #e67e22"
+					data-color="#e67e22"
+				></button>
+			</div>
+
+			<div class="button-column">
+				<div class="line-container">
+					<input
+						id="line-width"
+						type="range"
+						min="1"
+						max="10"
+						value="5"
+						step="0.1"
+					/>
+					<div>
+						Line width: <span id="line-width-value">5</span><span>/10</span>
+					</div>
+				</div>
+
+				<button id="background-color">
+					<i class="fa-solid fa-paint-roller"></i>Background
+				</button>
+				<button id="stroke">
+					<i class="fa-solid fa-paintbrush"></i>Stroke
+				</button>
+				<button id="fill">
+					<i class="fa-solid fa-brush"></i>Fill & Stroke
+				</button>
+				<button id="destroy-btn">
+					<i class="fa-solid fa-bomb"></i>Destroy
+				</button>
+				<button id="eraser-btn"><i class="fa-solid fa-eraser"></i>Erase</button>
+				<label for="file">
+					<span>
+						<i class="fa-solid fa-images"></i>Add Photo
+						<input type="file" accept="image/*" id="file"
+					/></span>
+				</label>
+				<div class="text-container">
+					<input
+						id="text-size"
+						type="range"
+						min="10"
+						max="100"
+						value="50"
+						step="5"
+					/>
+					<div>
+						Font-size: <span id="text-size-value">50</span><span>/100</span>
+					</div>
+					<input type="text" placeholder="Write and Double-Click!" id="text" />
+				</div>
+
+				<button id="save">
+					<i class="fa-solid fa-floppy-disk"></i>Save image
+				</button>
+			</div>
+		</div>
+		<script src="app.js"></script>
+		<script
+			src="https://kit.fontawesome.com/3c3a6e6b5e.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
